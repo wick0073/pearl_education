@@ -131,6 +131,7 @@ footer
   background: #2D2D2D;
   color:#F4EEE1;
   padding: 40px;
+  margin: 60px 0 0 0;
 }
 h4
 {
@@ -282,21 +283,6 @@ h4
   background-color: #ffffff;
 }
 
-.contact-form button {
-  width: 150px;
-  padding: 10px;
-  background-color: #14ACA0;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-.contact-form button:hover {
-  background-color: #128a82;
-}
-
 .contact-form p {
   text-align: center;
   font-size: 16px;
@@ -320,7 +306,85 @@ h4
   color: red;
 }
 
-/* Responsive design */
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 60px 0;
+}
+
+.review {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.reviewTopSection
+{
+  display: flex;
+  flex-direction: row;
+}
+.review .stars {
+  color: gold;
+  float: right;
+}
+.reviewTopSectionLeftCol
+{
+  display: flex;
+  flex-direction: column;
+}
+.reviewTopSectionLeftCol h3
+{
+  margin: 5px 0 5px 0;
+  text-align: left;
+}
+.review .service {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review .text {
+  font-size: 14px;
+  color: #333;
+}
+.reviewContainer
+{
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.outerReviewContainer
+{
+  background: #D9D9D9;
+}
+.starsText
+{
+  float: left;
+  background: #f1f1ef;
+  border-radius: 15px;
+  width: 50px;
+  padding: 5px 10px 5px 5px;
+  font-weight: bold;
+}
+.person
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 55px;
+  border: 5px solid #D9D9D9;
+  float: left;
+  margin: 0 15px 25px 0px;
+}
+
+/*----------------------------------------- Responsive design------------------------------------------------*/
 @media (max-width: 768px) {
   .contact-form-container {
     padding: 15px;
@@ -366,7 +430,19 @@ h4
     padding: 6px;
   }
 }
+@media (max-width: 900px) {
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
 
+  .review {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
 
 /* ===================================================================================================================== */
 /* ===================================================================================================================== */

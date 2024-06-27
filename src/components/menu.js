@@ -9,7 +9,7 @@ import $ from 'jquery';
 function Menu() {
 
     const toggleMenu = () => {
-        //alert("hi");
+       
 
        
         $('nav').slideToggle();

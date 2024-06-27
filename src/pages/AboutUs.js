@@ -7,7 +7,12 @@ const AboutUs = () => {
 
       <div>
         <h1 class='titleBar'>About Us</h1>
+
+
         <p>Please add your page stuff here</p>
+
+
+        
       </div>
       
       <Footer />

@@ -22,6 +22,7 @@ const ContactUs = () => {
         <div className="outerReviewContainer">
 
             <TitleBar colorCode="#14ACA0" titleText="Reviews"></TitleBar>
+            
               {/* <div className="reviewContainer">
                 <div className="reviews">
                   <div className="review">

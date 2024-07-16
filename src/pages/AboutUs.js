@@ -6,6 +6,8 @@ import OurStory from '../components/AboutUs/OurStory';
 import OurServices from '../components/AboutUs/OurServices';
 import OurApproach from '../components/AboutUs/OurApproach';
 import OurCommitment from '../components/AboutUs/OurCommitment';
+import Button from '../components/Button';
+import '../css/AboutUs/AboutUs.css';
 
 
 
@@ -15,16 +17,16 @@ const AboutUs = () => {
     <>
       <div>
         <TitleBar colorCode="#F7962D" titleText="About Us" />
-        <h1 class='titleBar'>About Us</h1>
-
-
-        
+       
       </div>
       <Welcome />
       <OurStory />
       <OurServices />
       <OurApproach />
       <OurCommitment />
+      <div class="contact-button">
+          <Button redirectTo="/contact-us">Contact Us</Button>
+      </div>
       <Footer />
       
     

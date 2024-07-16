@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/footer';
-import TestimonialsCarousel from '../components/Testimonials/TestimonialsCarousel.js';
+import TestimonialsCarousel from '../components/Testimonials/TestimonialsCarousel';
 import '../css/Testimonials/Testimonials.css';
 
 const Testimonials = () => {

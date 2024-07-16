@@ -23,7 +23,7 @@ const ContactUs = () => {
 
             <TitleBar colorCode="#14ACA0" titleText="Reviews"></TitleBar>
             
-              {/* <div className="reviewContainer">
+              <div className="reviewContainer">
                 <div className="reviews">
                   <div className="review">
                     <div className="reviewTopSection">
@@ -67,7 +67,7 @@ const ContactUs = () => {
                 </div>
 
               
-              </div> */}
+              </div>
 
 
             <ContactUsCarousel/>

@@ -3,8 +3,10 @@ import TitleBar from '../components/TitleBar';
 import Footer from '../components/footer';
 import Menu from '../components/menu';
 import '../css/Home/home.css';
-  import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Testimonials from '../components/home/Testimonials';
+
 
 const responsive = {
   superLargeDesktop: {
@@ -124,33 +126,11 @@ const Home = () => {
       </div>
 
 
-      <div className="owl-carousel">
-  <div className="item">Item 1</div>
-  <div className="item">Item 2</div>
-  <div className="item">Item 3</div>
-</div>
-
-
-      <div className="testimonials">
-        <h2>Testimonials</h2>
-        
-          <div className="testimonial-item">
-            <img src="/path/to/image1.jpg" alt="Person 1" className="testimonial-image" />
-            <p className="testimonial-text">"This is an amazing service! Highly recommended."</p>
-            <p className="testimonial-name">- Person 1</p>
-          </div>
-          <div className="testimonial-item">
-            <img src="/path/to/image2.jpg" alt="Person 2" className="testimonial-image" />
-            <p className="testimonial-text">"I had a fantastic experience with the team."</p>
-            <p className="testimonial-name">- Person 2</p>
-          </div>
-          <div className="testimonial-item">
-            <img src="/path/to/image3.jpg" alt="Person 3" className="testimonial-image" />
-            <p className="testimonial-text">"Great support and exceptional results."</p>
-            <p className="testimonial-name">- Person 3</p>
-          </div>
-        
-      </div>
+    <div>
+  
+      <Testimonials />
+   
+    </div>
 
       <Footer />
     </>

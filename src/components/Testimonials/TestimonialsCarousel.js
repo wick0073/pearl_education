@@ -1,59 +1,109 @@
 import React, { useState } from 'react';
 import '../../css/Testimonials/Testimonials.css';
 import Button from '../Button';
+import placeholder from '../../images/placeholder.jpg';  // Import the placeholder image
+import pearl from '../../images/pearl.png';  // Import the pearl image
 
 const testimonialsData = [
-  { id: 1, name: 'Justin Wilde', text: 'Great teaching service! The lessons are engaging, and have really helped me understand the material better.', photo: 'path/to/photo1.jpg', date: 'June 2024', role: 'Parent' },
-  { id: 2, name: 'Jane Smith', text: 'Highly recommend!', photo: 'path/to/photo2.jpg', date: 'May 2024', role: 'Student' },
-  { id: 3, name: 'Sam Wilson', text: 'Fantastic experience!', photo: 'path/to/photo3.jpg', date: 'April 2024', role: 'Parent' },
+  {
+    photo: placeholder,
+    text: '“Great teaching service! The lessons are engaging, and have really helped me understand the material better.”',
+    name: 'Justin Wilde, Parent',
+    date: 'June 2024',
+    rating: 5  // Add rating for each testimonial
+  },
+  {
+    photo: placeholder,
+    text: '“Excellent support and teaching methods. My child has improved significantly.”',
+    name: 'Sarah Johnson, Parent',
+    date: 'July 2024',
+    rating: 4
+  },
+  {
+    photo: placeholder,
+    text: '“Excellent support and teaching methods. My child has improved significantly.”',
+    name: 'Sarah Johnson, Parent',
+    date: 'July 2024',
+    rating: 4
+  },
+  {
+    photo: placeholder,
+    text: '“Excellent support and teaching methods. My child has improved significantly.”',
+    name: 'Sarah Johnson, Parent',
+    date: 'July 2024',
+    rating: 4
+  },
+  {
+    photo: placeholder,
+    text: '“Excellent support and teaching methods. My child has improved significantly.”',
+    name: 'Sarah Johnson, Parent',
+    date: 'July 2024',
+    rating: 4
+  }
 ];
 
 const TestimonialsCarousel = () => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent(current === testimonialsData.length - 1 ? 0 : current + 1);
+    setCurrent((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? testimonialsData.length - 1 : current - 1);
-  };
-
-  const handleMainButtonClick = () => {
-    alert('Main button clicked!');
+    setCurrent((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
   };
 
   return (
     <div className="carousel-container">
       <h2 className="testimonials-heading">Take a look at what our clients say about us!</h2>
-      <Button className="carousel-button prev" onClick={prevSlide}>
-        &#10094;
-      </Button>
-      <div className="carousel-slide">
-        {testimonialsData.map((testimonial, index) => (
-          <div
-            key={testimonial.id}
-            className={index === current ? 'slide active' : 'slide'}
-          >
-            {index === current && (
+      <div className="carousel-wrapper">
+        <button className="carousel-button prev" onClick={prevSlide}>
+          &#10094;
+        </button>
+        <div className="carousel-slide" style={{ transform: `translateX(-${current * 100}%)` }}>
+          {testimonialsData.map((testimonial, index) => (
+            <div
+              key={index}
+              className={`slide ${index === current ? 'active' : ''}`}
+            >
               <div className="testimonial-card">
-                <img src={testimonial.photo} alt={testimonial.name} className="profile-photo" />
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <h3 className="testimonial-name">{testimonial.name}, {testimonial.role}</h3>
+                <img
+                  src={testimonial.photo}
+                  alt="Profile"
+                  className="profile-photo"
+                />
+                <p className="testimonial-text">{testimonial.text}</p>
+                <p className="testimonial-name">{testimonial.name}</p>
                 <p className="testimonial-date">{testimonial.date}</p>
-              </div>
-            )}
-          </div>
+                <div className="rating">
+                  {[...Array(5)].map((_, i) => (
+                    <img
+                      key={i}
+                      src={pearl}
+                      alt="Pearl"
+                      className={`pearl ${i < testimonial.rating ? 'filled' : ''}`}
+                    />
+                  ))}
+                </div>
+                <div className="navigation-dots">
+        {testimonialsData.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === current ? 'active' : ''}`}
+            onClick={() => setCurrent(index)}
+          ></span>
         ))}
       </div>
-      <Button className="carousel-button next" onClick={nextSlide}>
-        &#10095;
-      </Button>
-      <div className="main-button-container">
-        <Button className="main-button" onClick={handleMainButtonClick}>
-          Main Button
-        </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="carousel-button next" onClick={nextSlide}>
+          &#10095;
+        </button>
       </div>
+      
+      <Button className="contact-us-button" redirectTo="/contact-us">Contact Us</Button>
     </div>
   );
 };

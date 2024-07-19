@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <>
       <div>
-        <h1 className='titleBar'>Testimonials</h1>
+        <h1 class="titleBar">Testimonials</h1>
         <TestimonialsCarousel />
       </div>
       <Footer />

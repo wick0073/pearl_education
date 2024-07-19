@@ -15,7 +15,6 @@ const Testimonials = () => {
           showStatus={false}
           showArrows={true}
           emulateTouch={true}
-          dynamicHeight={true}
           centerMode={true}
           centerSlidePercentage={60}
         >

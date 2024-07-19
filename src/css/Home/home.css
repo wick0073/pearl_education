@@ -3,7 +3,8 @@ body{
 }
 
 .hero-banner-container {
-  background: linear-gradient(45deg, #ff6b6b, #f06595);
+  background: rgb(247,150,45);
+  background: linear-gradient(90deg, rgba(247,150,45,1) 0%, rgba(20,172,160,1) 50%, rgba(244,171,192,1) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,6 +115,7 @@ body{
   display: flex;
   justify-content: center;
   gap: 20px;
+  
 }
 
 .service-card {
@@ -124,6 +126,7 @@ body{
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
+  background-color: #F7962D;
 }
 
 .service-btn {
@@ -159,7 +162,8 @@ body{
 }
 
 .why-choose {
-  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  background: rgb(247,150,45);
+  background: linear-gradient(90deg, rgba(247,150,45,1) 0%, rgba(20,172,160,1) 50%, rgba(244,171,192,1) 100%);
   padding: 50px 0;
   text-align: center;
   color: white;
@@ -206,7 +210,8 @@ body{
 }
 
 .embark-journey {
-  background: linear-gradient(45deg, #f7971e, #ffd200);
+  background: rgb(247,150,45);
+  background: linear-gradient(90deg, rgba(247,150,45,1) 0%, rgba(20,172,160,1) 50%, rgba(244,171,192,1) 100%);
   padding: 50px 0;
   text-align: center;
   color: white;
@@ -284,6 +289,40 @@ body{
   transition: transform 0.3s ease-in-out;
 }
 
+.testimonials-container {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px; /* Ensuring the max width for larger screens */
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
 .testimonial-image-container {
   width: 120px;
   height: 120px;
@@ -313,6 +352,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Added this line */
+  height: 100%; /* Added this line */
 }
 
 .carousel .control-arrow,

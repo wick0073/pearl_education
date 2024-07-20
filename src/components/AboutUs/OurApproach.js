@@ -30,16 +30,8 @@ const OurApproach = () => {
       <h1>Our Approach</h1>
       <div className="our-approach-container">
         <div className="circle-row">
-          {circles.slice(0, 3).map((circle, index) => (
+          {circles.map((circle, index) => (
             <div className="circle" key={index}>
-              <div className="circle-heading">{circle.heading}</div>
-              <div className="circle-description">{circle.description}</div>
-            </div>
-          ))}
-        </div>
-        <div className="circle-row">
-          {circles.slice(3).map((circle, index) => (
-            <div className="circle" key={index + 3}>
               <div className="circle-heading">{circle.heading}</div>
               <div className="circle-description">{circle.description}</div>
             </div>

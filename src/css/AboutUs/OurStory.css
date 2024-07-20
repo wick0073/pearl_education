@@ -47,8 +47,8 @@
   
   @media (max-width: 768px) {
     .our-story-content p {
-      font-size: 24px;
-      text-align: left;
+      font-size: 20px;
+      text-align: center;
     }
    .our-story-section h1 {
       font-size: 32px;
@@ -59,7 +59,7 @@
   @media (max-width: 480px) {
     .our-story-content p {
       font-size: 14px;
-      text-align: left;
+      text-align: center;
     }
     h1{
         font-size: 20px;

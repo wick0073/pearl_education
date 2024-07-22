@@ -14,7 +14,7 @@ const testimonialsData = [
   },
   {
     photo: placeholder,
-    text: '“Excellent support and teaching methods. My child has improved significantly.”',
+    text: '“Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly.”',
     name: 'Sarah Johnson, Parent',
     date: 'July 2024',
     rating: 4
@@ -35,7 +35,7 @@ const testimonialsData = [
   },
   {
     photo: placeholder,
-    text: '“Excellent support and teaching methods. My child has improved significantly.”',
+    text: '“Excellent support and txcellent support and teaching methods. Mxcellent support and teaching methods. Mxcellent support and teaching methods. Mxcellent support and teaching methods. Meaching methods. My child has improved significantly.”',
     name: 'Sarah Johnson, Parent',
     date: 'July 2024',
     rating: 4
@@ -85,24 +85,24 @@ const TestimonialsCarousel = () => {
                     />
                   ))}
                 </div>
-                <div className="navigation-dots">
-        {testimonialsData.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === current ? 'active' : ''}`}
-            onClick={() => setCurrent(index)}
-          ></span>
-        ))}
-      </div>
               </div>
             </div>
           ))}
         </div>
+        
         <button className="carousel-button next" onClick={nextSlide}>
           &#10095;
         </button>
       </div>
-      
+      <div className="navigation-dots">
+          {testimonialsData.map((_, dotIndex) => (
+            <span
+              key={dotIndex}
+              className={`dot ${dotIndex === current ? 'active' : ''}`}
+              onClick={() => setCurrent(dotIndex)}
+            ></span>
+          ))}
+        </div>
       <Button className="contact-us-button" redirectTo="/contact-us">Contact Us</Button>
     </div>
   );

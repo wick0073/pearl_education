@@ -1,0 +1,149 @@
+.our-services-section {
+    text-align: center;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  
+  h1 {
+    color:#F7962D;
+    font-size: 64px;
+  }
+  
+  .our-services-container {
+    background-color: #FEE5CB;
+    padding: 20px;
+    position: relative;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .carousel-overlay {
+    position: relative;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/about-us-our-services.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1; 
+    border-radius: 5px;
+  }
+  
+  .carousel .slide {
+    background: none;
+  }
+  
+  .carousel-heading {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    z-index: 2; 
+    position: relative; 
+  }
+  h2{
+    font-size: 40px;
+  }
+  .carousel-description {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
+    z-index: 2; 
+    position: relative; 
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-heading {
+      font-size: 20px;
+      text-align: center;
+    }
+  h2{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 38px;
+  }
+    .carousel-description {
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    .carousel-overlay {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-heading {
+      font-size: 18px;
+    }
+  
+    .carousel-description {
+      font-size: 14px;
+    }
+  
+    .carousel-overlay {
+      padding: 10px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 16px;
+    }
+  }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F7962D;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-arrow-prev {
+    left: 0px;
+  }
+  
+  .carousel-arrow-next {
+    right: 0px;
+  }
+  @media (max-width: 768px) {
+    .carousel-arrow {
+      width: 20px; 
+      height: 20px; 
+      padding: 5px; 
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-arrow {
+      width: 10px; 
+      height: 10px; 
+      padding: 3px; 
+    }
+  }

@@ -1,22 +1,35 @@
 import React from 'react';
 import Footer from '../components/footer';
+import TitleBar from '../components/TitleBar';
+import Welcome from '../components/AboutUs/Welcome';
+import OurStory from '../components/AboutUs/OurStory';
+import OurServices from '../components/AboutUs/OurServices';
+import OurApproach from '../components/AboutUs/OurApproach';
+import OurCommitment from '../components/AboutUs/OurCommitment';
+import Button from '../components/Button';
+import '../css/AboutUs/AboutUs.css';
+
+
+
 
 const AboutUs = () => {
   return (
     <>
-
       <div>
-        <h1 class='titleBar'>About Us</h1>
-
-
-        <p>Please add your page stuff here</p>
-
-
-        
+        <TitleBar colorCode="#F7962D" titleText="About Us" />
+       
       </div>
-      
+      <Welcome />
+      <OurStory />
+      <OurServices />
+      <OurApproach />
+      <OurCommitment />
+      <div class="contact-button">
+          <Button redirectTo="/contact-us">Contact Us</Button>
+      </div>
       <Footer />
-
+      
+    
     </>
   );
 };

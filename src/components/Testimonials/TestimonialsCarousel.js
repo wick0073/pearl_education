@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../css/Testimonials/Testimonials.css';
-import Button from '../Button';
+import Button from '../Testimonials/Button';
 import placeholder from '../../images/placeholder.jpg';  // Import the placeholder image
 import pearl from '../../images/pearl.png';  // Import the pearl image
 

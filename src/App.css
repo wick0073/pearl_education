@@ -65,7 +65,7 @@ nav
 
 .menu li a:hover , .menu li a.active
 {
-  color: #14ACA0;
+  color: #f4abc0;
   
 }
 #menu-icon
@@ -158,7 +158,7 @@ h4
 }
 .footerMenu li a:hover
 {
-  color:#14ACA0;
+  color: #f4abc0;
 }
 .socialMediaIcons
 {
@@ -200,7 +200,7 @@ h4
 } 
 .footerMenu li a.active
 {
-  color: #14ACA0;
+  color: #f4abc0;
 }
 @media screen and (min-width: 650px) 
 {

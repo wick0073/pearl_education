@@ -15,7 +15,7 @@ const ContactUs = () => {
   return (
     <>
       <div>
-        <TitleBar colorCode="#14ACA0" titleText="Contact Us"></TitleBar>
+        <TitleBar textColor="#000000" colorCode="#14ACA0" titleText="Contact Us"></TitleBar>
 
         <ContactUsForml/>
 

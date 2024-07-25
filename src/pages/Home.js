@@ -5,7 +5,7 @@ import Menu from '../components/menu';
 import '../css/Home/home.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Testimonials from '../components/home/Testimonials.js';
+import Testimonials from '../components/Home/Testimonials';
 
 
 const responsive = {

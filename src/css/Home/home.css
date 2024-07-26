@@ -1,5 +1,6 @@
 body{
   background-color: #F4EEE1;
+  
 }
 
 .hero-banner-container {
@@ -8,7 +9,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh; /* Adjust height as needed */
+  margin-top: 10px;
+  height: 70vh; /* Adjust height as needed */
   width: 100%;
   position: relative;
 }
@@ -115,27 +117,44 @@ body{
   display: flex;
   justify-content: center;
   gap: 20px;
-  
 }
 
 .service-card {
-  width: 300px;
+  width: 400px; /* Increased width for better visibility */
+  height: 300px; /* Increased height for more content space */
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* More pronounced shadow */
   position: relative;
   overflow: hidden;
   background-color: #F7962D;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transform transition */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Enhance shadow on hover */
+}
+
+.service-card p {
+  white-space: normal; /* Allow text to wrap normally */
+  margin: 0; /* Remove default margins to avoid spacing issues */
 }
 
 .service-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  width: 150px;
+  background-color: #14ACA0;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -146,10 +165,6 @@ body{
 
 .more-info {
   display: none;
-}
-
-.service-card:hover .more-info {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -159,7 +174,22 @@ body{
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
+  overflow: hidden; /* Prevent scrolling */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 1; /* Ensure overlay is on top of other content */
 }
+
+.service-card.show-more .more-info {
+  display: block;
+  opacity: 1;
+}
+
+.more-info p {
+  white-space: normal; /* Allow text to wrap normally */
+  margin: 0; /* Remove default margins to avoid spacing issues */
+}
+
 
 .why-choose {
   background: rgb(247,150,45);
@@ -191,23 +221,49 @@ body{
   overflow: hidden;
   color: white;
   text-align: left;
+  transition: max-height 0.3s ease-in-out;
 }
 
-.why-choose-card h3 {
-  margin-bottom: 10px;
-}
-
+/* Ensure content in cards wraps and handles overflow */
 .why-choose-card p {
-  display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.why-choose-card:hover p {
+/* Apply max-height to the first two cards */
+.why-choose-card:nth-child(1),
+.why-choose-card:nth-child(2) {
+  max-height: 200px; /* Adjust based on the expected height of the content */
+}
+
+/* Hover effect for the first two cards */
+.why-choose-card:nth-child(1):hover,
+.why-choose-card:nth-child(2):hover {
+  max-height: 1000px; /* Large value to ensure full expansion */
+}
+
+.why-choose-card:nth-child(1):hover p,
+.why-choose-card:nth-child(2):hover p {
   white-space: normal;
   overflow: visible;
 }
+
+/* Ensure the third card always shows full content and is unaffected by hover */
+.why-choose-card:nth-child(3) {
+  max-height: none; /* No height restriction */
+  overflow: visible; /* Ensure content is always fully visible */
+  transition: none; /* Disable transition effects */
+  white-space: normal; /* Ensure content wraps normally */
+  background: rgba(255, 255, 255, 0.3); /* Slightly different background to distinguish it */
+}
+
+.why-choose-card:nth-child(3) p {
+  white-space: normal; /* Ensure content wraps normally */
+  overflow: visible; /* Ensure content is always fully visible */
+  text-overflow: initial; /* Ensure content is always fully visible */
+}
+
 
 .embark-journey {
   background: rgb(247,150,45);
@@ -238,18 +294,38 @@ body{
 
 .embark-journey-card p {
   margin-bottom: 20px;
+  text-align: center;
 }
 
+.embark_banner {
+  display: block; /* Ensure the image is a block-level element */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 100%; /* Adjust width as needed */
+  max-width: 800px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: round corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+  margin-top: 20px; /* Optional: add margin at the top */
+  margin-bottom: 20px; /* Optional: add margin at the bottom */
+  object-fit: cover; /* Ensure the image covers its container */
+}
+
+
 .contact-btn {
-  display: block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  width: 150px;
+  background-color: #14ACA0;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border-radius: 15px;
   transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
 }
 
 .contact-btn:hover {

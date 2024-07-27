@@ -15,7 +15,7 @@
   overflow: hidden;
   margin-top: 20px;
   background-color:  #f9f4e6;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
   border-radius: 10px;
   padding: 20px;
   width: 70%;

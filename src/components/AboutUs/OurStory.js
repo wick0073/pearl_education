@@ -4,7 +4,7 @@ import '../../css/AboutUs/OurStory.css';
 const OurStory = () => {
   return (
     <div className="our-story-section">
-      <h1>Our Story</h1>
+      <h1 id='ourstoryheading'>Our Story</h1>
       <div className="our-story-container">
         <div className="our-story-content">
           <p>

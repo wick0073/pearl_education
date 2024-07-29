@@ -6,7 +6,7 @@
   
   h1 {
     color:#F7962D;
-    font-size: 64px;
+    font-size: 49px;
   }
   
   .our-services-container {
@@ -37,7 +37,7 @@
     background-image: url('../../images/about-us-our-services.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: -1; 
     border-radius: 5px;
   }
@@ -48,18 +48,18 @@
   
   .carousel-heading {
     text-align: center;
-    font-size: 48px;
+    font-size: 35px;
     font-weight: bold;
     color: black;
     z-index: 2; 
     position: relative; 
   }
   h2{
-    font-size: 40px;
+    font-size: 28px;
   }
   .carousel-description {
     text-align: center;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 500;
     color: black;
     z-index: 2; 
@@ -75,7 +75,7 @@
     font-size: 18px;
   }
   h1{
-    font-size: 38px;
+    font-size: 32px;
   }
     .carousel-description {
       font-size: 16px;

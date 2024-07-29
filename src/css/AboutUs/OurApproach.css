@@ -1,4 +1,4 @@
-/* Base styles */
+
 .our-approach-section {
   text-align: center;
   padding: 20px;
@@ -40,7 +40,7 @@
 }
 
 .circle-heading {
-  font-size: 48px;
+  font-size: 35px;
   color: #F4EEE1;
   text-shadow: black 2px 2px 2px;
   font-weight: bold;

@@ -17,7 +17,6 @@ const AboutUs = () => {
     <>
       <div>
       <TitleBar textColor="#000000" colorCode="#14aca0" titleText="About Us" />
-      
       </div>
       <Welcome />
       <OurStory />

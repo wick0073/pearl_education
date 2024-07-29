@@ -1,18 +1,20 @@
 import React from 'react';
 import Footer from '../components/footer';
+import TestimonialsCarousel from '../components/Testimonials/TestimonialsCarousel';
+import '../css/Testimonials/Testimonials.css';
+import TitleBar from '../components/TitleBar';
 
 const Testimonials = () => {
   return (
-
     <>
-    
       <div>
-        <h1 class='titleBar'>Testimonials</h1>
-        <p>Please add your page stuff here</p>
+        
+      <TitleBar textColor="#000" colorCode="#f4abc0" titleText="Testimonials"></TitleBar>
+
+        
+        <TestimonialsCarousel />
       </div>
-
       <Footer />
-
     </>
   );
 };

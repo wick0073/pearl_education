@@ -126,6 +126,7 @@ const Home = () => {
       <div className="why-choose">
       <h2>Why Choose Pearl Education</h2>
       <div className="why-choose-cards">
+
         <div className="why-choose-card">
           <h3>Success in standardized tests is vital for academic and professional progress. We offer specialized preparation for:</h3>
           <h3>IELTS</h3>
@@ -133,6 +134,7 @@ const Home = () => {
           <h3>CELPIP</h3>
           <p>Our targeted instruction and practice sessions ensure students are well-prepared to excel in the CELPIP exam.</p>
         </div>
+
         <div className="why-choose-card">
           <h3>Comprehensive Subject Coverage</h3>
           <h3>Test Preparation</h3>
@@ -148,10 +150,12 @@ const Home = () => {
           <h3>Chemistry: </h3>
           <p>We break down challenging chemical concepts and reactions, ensuring students can grasp and excel in this crucial science subject.</p>
         </div>
+
         <div className="why-choose-card">
           <h3>Proven Success</h3>
           <p>Our students consistently achieve high academic performance and gain the confidence to pursue their educational and career goals. Join our community of successful learners and start your journey towards excellence today.</p>
         </div>
+        
       </div>
     </div>
 

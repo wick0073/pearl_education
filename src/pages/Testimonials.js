@@ -7,13 +7,14 @@ import TitleBar from '../components/TitleBar';
 const Testimonials = () => {
   return (
     <>
-      <div>
+      
         
       <TitleBar textColor="#000" colorCode="#f4abc0" titleText="Testimonials"></TitleBar>
 
-        
+      <div class="tesimonialWrapper">
         <TestimonialsCarousel />
       </div>
+
       <Footer />
     </>
   );

@@ -31,7 +31,7 @@ function Menu() {
  
                     <ul className="menu">
                         <li>
-                            <NavLink to="/" exact className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+                            <NavLink to="/pearl_education" exact className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
                         </li>
                         <li>
                             <NavLink to="/about-us" className={({ isActive }) => (isActive ? 'active' : '')}>About Us</NavLink>
@@ -47,7 +47,7 @@ function Menu() {
                 
 
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/pearl_education" element={<Home />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/testimonials" element={<Testimonials />} />
                     <Route path="/contact-us" element={<ContactUs />} />

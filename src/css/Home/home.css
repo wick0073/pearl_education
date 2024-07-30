@@ -465,3 +465,7 @@ body{
 .carousel .carousel-indicators .selected {
   background: #333;
 }
+
+.carousel.carousel-slider .control-arrow:hover {
+   background: rgba(0, 0, 0, 0) !important; 
+}

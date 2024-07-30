@@ -301,7 +301,7 @@ body{
   display: block; /* Ensure the image is a block-level element */
   margin: 0 auto; /* Center the image horizontally */
   width: 100%; /* Adjust width as needed */
-  max-width: 800px; /* Set a maximum width */
+  max-width: 700px; /* Set a maximum width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: round corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */

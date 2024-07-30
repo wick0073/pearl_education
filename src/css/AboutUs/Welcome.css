@@ -5,7 +5,7 @@
   padding: 20px;
   padding-top: 30px;
   background: rgb(20,172,160);
-background: linear-gradient(90deg, rgba(20,172,160,1) 0%, rgba(247,150,45,1) 30%, rgba(244,171,192,1) 70%, rgba(244,238,225,1) 100%);
+  background: linear-gradient(90deg, rgba(247,150,45,1) 0%, rgba(20,172,160,1) 50%, rgba(244,171,192,1) 100%);
 }
 
 .welcome-header {
@@ -15,7 +15,8 @@ background: linear-gradient(90deg, rgba(20,172,160,1) 0%, rgba(247,150,45,1) 30%
 
 .welcome-header h1 {
   font-size: 49px;
-  color: rgb(31, 31, 31);
+  color: white;
+ 
 }
 
 .welcome-content {
@@ -27,15 +28,23 @@ background: linear-gradient(90deg, rgba(20,172,160,1) 0%, rgba(247,150,45,1) 30%
 }
 
 .text-container {
-  background:#ebe3d2;
-  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  color: white;
   font-size: 20px;
   font-weight: 500;
   padding: 20px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+  border-radius: 12px; 
   text-align: left;
   flex: 1;
+  transition: transform 0.3s ease; 
+}
+
+.text-container:hover {
+  transform: translateY(-5px); 
 }
 
 .text-container.left {

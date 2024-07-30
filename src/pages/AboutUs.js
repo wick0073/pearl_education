@@ -16,7 +16,7 @@ const AboutUs = () => {
   return (
     <>
       <div>
-      <TitleBar textColor="#000000" colorCode="#14aca0" titleText="About Us" />
+      <TitleBar textColor="#ffffff" colorCode="#14aca0" titleText="About Us" />
       
       </div>
       <Welcome />

@@ -1,12 +1,13 @@
 import React from 'react';
 import '../../css/AboutUs/OurCommitment.css';
+import ourCommitment from "../../images/about-us-our-commitment.png";
 
 const OurCommitment = () => {
   return (
     <div className="our-commitment-section">
       <div className="our-commitment-grid">
         <div className="our-commitment-image">
-          <img src="about-us-our-commitment.png" alt="Our Commitment" />
+          <img src={ourCommitment} alt="Our Commitment" />
         </div>
         <div className="our-commitment-content">
           <h1>Our Commitment</h1>

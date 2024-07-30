@@ -7,6 +7,7 @@ import '../css/Home/home.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Testimonials from '../components/Home/Testimonials';
+import embarkBanner from "../images/embark_banner.png";
 
 
 
@@ -162,7 +163,7 @@ const Home = () => {
       <div className="embark-journey">
         <h2>Embark Your Journey</h2>
         <div className="embark-journey-card">
-        <img class="embark_banner" src="/embark_banner.png" alt="Descriptive text here"/>
+        <img class="embark_banner" src={embarkBanner} alt="Descriptive text here"/>
 
           <p>Unlock your full potential with Pearl Education, your trusted partner in academic excellence. We provide personalized, high-quality tutoring for students from Lower Kindergarten (LKG) to undergraduate levels. Whether you need help with core subjects or are preparing for important language proficiency exams, Pearl Education is here to guide you every step of the way.</p>
           <Button className="contact-btn" >Get in Touch</Button>

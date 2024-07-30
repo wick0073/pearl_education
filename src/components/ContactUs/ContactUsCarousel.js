@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import "../../css/ContactUs/contactUsCarousel.css"
+import person1 from "../../images/person1.jpg"
 
 const ContactUsCarousel = () => {
 
@@ -66,19 +67,20 @@ const ContactUsCarousel = () => {
             >
               <div className="review">
                 <div className="reviewTopSection">
-                  <img src="/pearl_education/static/media/person1.jpg" alt="Person 1" className="person" />
+                  <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
                       4.6<div className="stars"> ★</div>
                     </div>
-                    <h3>Suki Wick</h3>
-                    <div className="service">Web Development</div>
+                    <h3>Ravi G</h3>
+                    <div className="service"> Parent of Grade 12 Student</div>
                   </div>
                 </div>
-                <div className="title">Great Service!</div>
+                <div className="title">Transformative Experience</div>
                 <div className="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus nec sem semper accumsan
-                  eget non tortor. Proin sagittis dui venenatis, pellentesque nisi hendrerit, iaculis felis.
+                "Pearl Education has been a game-changer for my daughter. 
+                The personalized one-on-one sessions have helped her grasp complex math concepts with ease. 
+                Thank you, Pearl Education!"
                 </div>
               </div>
             </div>
@@ -96,19 +98,20 @@ const ContactUsCarousel = () => {
             >
               <div className="review">
                 <div className="reviewTopSection">
-                  <img src="person3.jpg" alt="Person 1" className="person" />
+                  <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
                       4.6<div className="stars"> ★</div>
                     </div>
-                    <h3>Suki Wick</h3>
-                    <div className="service">Web Development</div>
+                    <h3>Rahil</h3>
+                    <div className="service">Grade 11 Student</div>
                   </div>
                 </div>
-                <div className="title">Great Service!</div>
+                <div className="title">Outstanding Results</div>
                 <div className="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus nec sem semper accumsan
-                  eget non tortor. Proin sagittis dui venenatis, pellentesque nisi hendrerit, iaculis felis.
+                "I was really struggling with Physics until I joined Pearl Education. 
+                The tutor was patient and explained everything in a way that made sense to me. 
+                I ended up scoring an A in my final exams!"
                 </div>
               </div>
             </div>
@@ -126,19 +129,20 @@ const ContactUsCarousel = () => {
             >
               <div className="review">
                 <div className="reviewTopSection">
-                  <img src="person3.jpg" alt="Person 1" className="person" />
+                  <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
                       4.6<div className="stars"> ★</div>
                     </div>
-                    <h3>Suki Wick</h3>
-                    <div className="service">Web Development</div>
+                    <h3>Ephraim</h3>
+                    <div className="service">Parent of Grade 12 Student</div>
                   </div>
                 </div>
-                <div className="title">Great Service!</div>
+                <div className="title">Expert Guidance</div>
                 <div className="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus nec sem semper accumsan
-                  eget non tortor. Proin sagittis dui venenatis, pellentesque nisi hendrerit, iaculis felis.
+                "The tutors at Pearl Education are incredibly knowledgeable and dedicated. 
+                My son’s computer science skills have improved significantly. 
+                He’s now confident in coding and even created his first app!"
                 </div>
               </div>
             </div>
@@ -156,16 +160,16 @@ const ContactUsCarousel = () => {
             >
               <div className="review">
                 <div className="reviewTopSection">
-                  <img src="person3.jpg" alt="Person 1" className="person" />
+                  <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
                       4.6<div className="stars"> ★</div>
                     </div>
-                    <h3>Suki Wick</h3>
-                    <div className="service">Web Development</div>
+                    <h3>Muko</h3>
+                    <div className="service">Senior Applicant</div>
                   </div>
                 </div>
-                <div className="title">Great Service!</div>
+                <div className="title">Comprehensive Support</div>
                 <div className="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus nec sem semper accumsan
                   eget non tortor. Proin sagittis dui venenatis, pellentesque nisi hendrerit, iaculis felis.
@@ -186,19 +190,20 @@ const ContactUsCarousel = () => {
             >
               <div className="review">
                 <div className="reviewTopSection">
-                  <img src="person3.jpg" alt="Person 1" className="person" />
+                  <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
                       4.6<div className="stars"> ★</div>
                     </div>
-                    <h3>Suki Wick</h3>
-                    <div className="service">Web Development</div>
+                    <h3>Rayyan</h3>
+                    <div className="service">Undergraduate Studen</div>
                   </div>
                 </div>
-                <div className="title">Great Service!</div>
+                <div className="title">Flexible and Convenient!</div>
                 <div className="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus nec sem semper accumsan
-                  eget non tortor. Proin sagittis dui venenatis, pellentesque nisi hendrerit, iaculis felis.
+                "With my busy schedule, finding time for tutoring was challenging. 
+                Pearl Education’s online tutoring option was a lifesaver. 
+                The flexibility allowed me to learn at my own pace without compromising on quality."
                 </div>
               </div>
             </div>

@@ -1,69 +1,70 @@
 .our-story-section {
+  padding: 20px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(20,172,160);
+background: linear-gradient(90deg, rgba(20,172,160,1) 0%, rgba(247,150,45,1) 30%, rgba(244,171,192,1) 70%, rgba(244,238,225,1) 100%);
+}
 
-    color: #F7962D;
-    padding: 20px;
-    padding-top: 30px;
-  }
+#ourstoryheading{
+  color: black;
+}
+.our-story-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color:  #f9f4e6;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+  border-radius: 10px;
+  padding: 20px;
+  width: 70%;
+ 
+}
+h1{
+  color: black;
+}
+.our-story-content {
+  color: rgb(36, 36, 36);
+}
+
+.our-story-content p {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+h1 {
+  font-size: 49px;
+  text-align: center;
+  color: black;
   
-  .our-story-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    margin-top: 20px; 
-  }
-  
-  .our-story-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../../images/about-us-our-story.jpg'); 
-    background-size: cover;
-    background-position: center;
-    opacity: 0.4;
-    z-index: -1;
-  }
-  
-  .our-story-content {
-    padding: 20px;
-    border-radius: 10px;
-    color: black;
-  }
-  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .our-story-content p {
-    font-size: 34px;
-    font-weight: 500;
+    font-size: 16px;
     text-align: center;
   }
-  h1{
-    font-size: 64px;
+
+  .our-story-section h1 {
+    font-size: 32px;
     text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .our-story-content p {
-      font-size: 20px;
-      text-align: center;
-    }
-   .our-story-section h1 {
-      font-size: 32px;
-      text-align: center;
-    }
+}
+
+@media (max-width: 480px) {
+  .our-story-content p {
+    font-size: 14px;
+    text-align: center;
   }
-  
-  @media (max-width: 480px) {
-    .our-story-content p {
-      font-size: 14px;
-      text-align: center;
-    }
-    h1{
-        font-size: 20px;
-        
-    }
+
+  h1 {
+    font-size: 20px;
   }
-  
+}

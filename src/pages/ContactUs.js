@@ -17,7 +17,9 @@ const ContactUs = () => {
       <div>
         <TitleBar textColor="#000000" colorCode="#14ACA0" titleText="Contact Us"></TitleBar>
 
-        <ContactUsForml/>
+        <div>
+          <ContactUsForml/>
+        </div>
 
         <div className="outerReviewContainer">
 

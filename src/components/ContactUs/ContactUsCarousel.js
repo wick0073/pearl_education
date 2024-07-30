@@ -66,7 +66,7 @@ const ContactUsCarousel = () => {
             >
               <div className="review">
                 <div className="reviewTopSection">
-                  <img src="person3.jpg" alt="Person 1" className="person" />
+                  <img src="/pearl_education/static/media/person1.jpg" alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
                       4.6<div className="stars"> ★</div>

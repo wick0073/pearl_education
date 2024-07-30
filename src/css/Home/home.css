@@ -428,7 +428,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Added this line */
+  flex-direction: column; 
   height: 100%; /* Added this line */
 }
 

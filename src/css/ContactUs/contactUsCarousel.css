@@ -51,7 +51,8 @@
   }
   .outerReviewContainer
   {
-    background: #2D2D2D;
+    /* background: #2D2D2D; */
+    background: linear-gradient(90deg, rgba(20,172,160,1) 0%, rgba(247,150,45,1) 30%, rgba(244,171,192,1) 70%, rgba(244,238,225,1) 100%);
   }
   .starsText
   {

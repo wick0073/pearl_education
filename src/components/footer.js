@@ -13,7 +13,7 @@ const Footer = () => {
                     <div class="col1">
                         <div class="footer-logo"></div>
                         <h4>Pearl Education</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor diam vel mi tempor, sed luctus felis sagittis.</p>
+                        <p>Embark on a path to academic success with Pearl Education, where personalized learning meets excellence.</p>
                     </div>
                     
                     <div class="col2 middle-box">

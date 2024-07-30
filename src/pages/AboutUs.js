@@ -16,8 +16,12 @@ const AboutUs = () => {
   return (
     <>
       <div>
+<<<<<<< HEAD
       <TitleBar textColor="#ffffff" colorCode="#14aca0" titleText="About Us" />
       
+=======
+      <TitleBar textColor="#000000" colorCode="#14aca0" titleText="About Us" />
+>>>>>>> cc941506a2fb7560765e2505bf47735975498be6
       </div>
       <Welcome />
       <OurStory />

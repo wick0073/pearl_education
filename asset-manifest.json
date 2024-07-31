@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/pearl_education/static/css/main.ed331cbe.css",
-    "main.js": "/pearl_education/static/js/main.f3e5e8fb.js",
+    "main.css": "/pearl_education/static/css/main.36a9298e.css",
+    "main.js": "/pearl_education/static/js/main.6fc375ee.js",
     "static/js/453.0934d45b.chunk.js": "/pearl_education/static/js/453.0934d45b.chunk.js",
     "static/media/embark_banner.png": "/pearl_education/static/media/embark_banner.30625788cce5c239d2dd.png",
     "static/media/about-us-our-commitment.png": "/pearl_education/static/media/about-us-our-commitment.a00b1a4dc7b3d74a84c5.png",
     "static/media/placeholder.jpg": "/pearl_education/static/media/placeholder.719e55b48e8ae4455e1f.jpg",
     "static/media/about-us-our-services.jpg": "/pearl_education/static/media/about-us-our-services.8e58d16eea3157e8e92b.jpg",
     "static/media/about-us-our-approach.jpg": "/pearl_education/static/media/about-us-our-approach.cfa14152195cb453f60e.jpg",
-    "static/media/person1.jpg": "/pearl_education/static/media/person1.39a33e46d62b18fbb0eb.jpg",
     "static/media/pearl.png": "/pearl_education/static/media/pearl.89701bce6f544025283f.png",
     "index.html": "/pearl_education/index.html",
-    "main.ed331cbe.css.map": "/pearl_education/static/css/main.ed331cbe.css.map",
-    "main.f3e5e8fb.js.map": "/pearl_education/static/js/main.f3e5e8fb.js.map",
+    "main.36a9298e.css.map": "/pearl_education/static/css/main.36a9298e.css.map",
+    "main.6fc375ee.js.map": "/pearl_education/static/js/main.6fc375ee.js.map",
     "453.0934d45b.chunk.js.map": "/pearl_education/static/js/453.0934d45b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed331cbe.css",
-    "static/js/main.f3e5e8fb.js"
+    "static/css/main.36a9298e.css",
+    "static/js/main.6fc375ee.js"
   ]
 }

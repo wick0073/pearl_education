@@ -120,8 +120,8 @@ body{
 }
 
 .service-card {
-  width: 400px; /* Increased width for better visibility */
-  height: 300px; /* Increased height for more content space */
+  /* width: 400px; Increased width for better visibility
+  height: 300px; Increased height for more content space */
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
@@ -208,11 +208,13 @@ body{
   display: flex;
   justify-content: center;
   gap: 20px;
+  padding: 0 10px 0px 10px;
+  flex-direction: column;
 }
 
 .why-choose-card {
-  width: 300px;
-  padding: 20px;
+  width: 85%;
+  /* padding: 20px; */
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -222,53 +224,24 @@ body{
   color: white;
   text-align: left;
   transition: max-height 0.3s ease-in-out;
+  margin: 0 auto;
+  height: 200px;
 }
 
 /* Ensure content in cards wraps and handles overflow */
 .why-choose-card p {
-  overflow: hidden;
+  /* overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
 }
 
-/* Apply max-height to the first two cards */
-.why-choose-card:nth-child(1),
-.why-choose-card:nth-child(2) {
-  max-height: 200px; /* Adjust based on the expected height of the content */
-}
 
-/* Hover effect for the first two cards */
-.why-choose-card:nth-child(1):hover,
-.why-choose-card:nth-child(2):hover {
-  max-height: 1000px; /* Large value to ensure full expansion */
-}
-
-.why-choose-card:nth-child(1):hover p,
-.why-choose-card:nth-child(2):hover p {
-  white-space: normal;
-  overflow: visible;
-}
-
-/* Ensure the third card always shows full content and is unaffected by hover */
-.why-choose-card:nth-child(3) {
-  max-height: none; /* No height restriction */
-  overflow: visible; /* Ensure content is always fully visible */
-  transition: none; /* Disable transition effects */
-  white-space: normal; /* Ensure content wraps normally */
-  background: rgba(255, 255, 255, 0.3); /* Slightly different background to distinguish it */
-}
-
-.why-choose-card:nth-child(3) p {
-  white-space: normal; /* Ensure content wraps normally */
-  overflow: visible; /* Ensure content is always fully visible */
-  text-overflow: initial; /* Ensure content is always fully visible */
-}
 
 
 .embark-journey {
   background: rgb(247,150,45);
   background: linear-gradient(90deg, rgba(247,150,45,1) 0%, rgba(20,172,160,1) 50%, rgba(244,171,192,1) 100%);
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   text-align: center;
   color: white;
 }
@@ -279,7 +252,7 @@ body{
 }
 
 .embark-journey-card {
-  width: 80%;
+  width: 47%;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
@@ -398,7 +371,32 @@ body{
   color: #fff;
   transition: transform 0.3s ease-in-out;
 }
+@media only screen and (max-width: 1200px) {
 
+  .service-cards 
+  {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .service-card
+  {
+    width: 70%;
+  }
+  
+  .hero-banner {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1200px) 
+{
+  .service-card
+  {
+    max-width:400px;
+  }
+}
 .testimonial-image-container {
   width: 120px;
   height: 120px;
@@ -468,4 +466,57 @@ body{
 
 .carousel.carousel-slider .control-arrow:hover {
    background: rgba(0, 0, 0, 0) !important; 
+}
+
+.why-choose-card p,.why-choose-card h3
+{
+  overflow: hidden;
+  /* white-space: nowrap;
+  text-overflow: ellipsis; */
+  padding: 0px 10px 6px 10px;
+}
+.embark-journey h2
+{
+  margin: 0 0 30px 0;
+}
+.downArrow
+{
+  border-top: 1px solid #fff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    color: #000;
+}
+
+@media (max-width: 1000px) 
+{
+  .embark-journey-card 
+  {
+    width: 75%;
+  }
+
+  .why-choose-card
+  {
+    
+  }
+
+
+
+}
+
+@media (min-width: 1000px) 
+{
+  .why-choose-cards
+  {
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow 
+{
+  opacity: 1 !important;
 }

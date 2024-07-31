@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import "../../css/ContactUs/contactUsCarousel.css"
-import person1 from "../../images/person1.jpg"
+import person1 from "../../images/defaultProfilePicture.png"
 
 const ContactUsCarousel = () => {
 

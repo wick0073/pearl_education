@@ -25,12 +25,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 65%;
+  margin: 0 auto;
 }
 
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .slide {
@@ -41,32 +43,34 @@
   align-items: center;
 }
 
-.carousel-button {
-  width: 80px;
-  height: 80px;
-  font-size: 35px;
+.carousel-button
+ {
+  width: 43px;
+  height: 43px;
+  font-size: 19px;
   font-weight: 700;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #F4ABC0;
-  color: #F4ABC0;
+  background-color: #F7962D;
+  color: #fff;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #333;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   z-index: 1;
-  border-radius: 50%;
+  border-radius: 49%;
   transition: 0.3s;
   border: #F4ABC0 3px solid;
 }
 
-.carousel-button.prev {
-  left: -20px;
+.carousel-button.prev 
+{
+  left: 90px;
 }
 
 .carousel-button.next {
-  right: -20px;
+  right: 90px;
 }
 
 .carousel-button:hover {
@@ -165,4 +169,34 @@
 .tesimonialWrapper
 {
   background: linear-gradient(90deg, rgba(20,172,160,1) 0%, rgba(247,150,45,1) 30%, rgba(244,171,192,1) 70%, rgba(244,238,225,1) 100%);
+}
+
+.responsiveControls .carousel-button.next, .responsiveControls .carousel-button.prev
+ {
+  display: none;
+ }
+
+@media (max-width: 800px) 
+{
+  .responsiveControls
+  {
+    margin: 335px 0 0 0;
+  }
+  .carousel-button.next, .carousel-button.prev
+  {
+
+  }
+ .responsiveControls .carousel-button.next, .responsiveControls .carousel-button.prev
+ {
+  position: absolute;
+  display: block;
+ }
+ .carousalControl
+ {
+  /* display: none; */
+ }
+ .responsiveControl
+ {
+  margin: 5px 30px 0 30px;
+ }
 }

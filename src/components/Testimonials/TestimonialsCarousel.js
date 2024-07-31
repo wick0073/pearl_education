@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../css/Testimonials/Testimonials.css';
-import Button from '../Testimonials/Button';
+import Button from '../../components/Button';
 import placeholder from '../../images/placeholder.jpg';  // Import the placeholder image
 import pearl from '../../images/pearl.png';  // Import the pearl image
 
@@ -57,7 +57,8 @@ const TestimonialsCarousel = () => {
     <div className="carousel-container">
       <h2 className="testimonials-heading">Take a look at what our clients say about us!</h2>
       <div className="carousel-wrapper">
-        <button className="carousel-button prev" onClick={prevSlide}>
+
+        <button className="carousalControl carousel-button prev" onClick={prevSlide}>
           &#10094;
         </button>
         <div className="carousel-slide" style={{ transform: `translateX(-${current * 100}%)` }}>
@@ -90,10 +91,25 @@ const TestimonialsCarousel = () => {
           ))}
         </div>
         
-        <button className="carousel-button next" onClick={nextSlide}>
+        <button className="carousalControl carousel-button next" onClick={nextSlide}>
           &#10095;
         </button>
+        
+        
+        
       </div>
+
+      {/* <div class="responsiveControls">
+          <button className="responsiveControl carousel-button prev" onClick={prevSlide}>
+            &#10094;
+          </button>
+
+          <button className="responsiveControl carousel-button next" onClick={nextSlide}>
+          &#10095;
+          </button>
+       </div> */}
+
+      
       <div className="navigation-dots">
           {testimonialsData.map((_, dotIndex) => (
             <span

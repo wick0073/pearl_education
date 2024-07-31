@@ -6,8 +6,9 @@ import Menu from '../components/menu';
 import '../css/Home/home.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Testimonials from '../components/Home/Testimonials';
+import Testimonials from '../components/Home/Testimonials.js';
 import embarkBanner from "../images/embark_banner.png";
+import $ from 'jquery';
 
 
 
@@ -31,6 +32,39 @@ const responsive = {
 };
 
 const Home = () => {
+
+  //===================================================================
+  $(document).ready(function() {
+    var hoverTimeout;
+    
+    $('.why-choose-card').hover(
+        function() {
+            var element = $(this);
+            hoverTimeout = setTimeout(function() {
+                element.stop().animate({ height: "100%" }, 400);
+                element.find('p, h3').css({
+                    overflow: "",
+                    whiteSpace: "",
+                    textOverflow: ""
+                });
+                element.find('.downArrow').html('&#9650;'); // Set the up arrow
+            }, 1000); // Add a delay of 1000 milliseconds
+        },
+        function() {
+            clearTimeout(hoverTimeout);
+            var element = $(this);
+            element.stop().animate({ height: "200px" }, 400);
+            element.find('p, h3').css({
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis"
+            });
+            element.find('.downArrow').html('&#9660;'); // Set the down arrow
+        }
+    );
+})
+  //===================================================================
+  
   const [activeCard, setActiveCard] = useState(null);
   const cardRefs = useRef([]);
 
@@ -127,13 +161,15 @@ const Home = () => {
       <div className="why-choose">
       <h2>Why Choose Pearl Education</h2>
       <div className="why-choose-cards">
-
+        
         <div className="why-choose-card">
           <h3>Success in standardized tests is vital for academic and professional progress. We offer specialized preparation for:</h3>
           <h3>IELTS</h3>
           <p>Our IELTS courses focus on enhancing language proficiency and test-taking strategies to help students achieve their desired scores.</p>
           <h3>CELPIP</h3>
           <p>Our targeted instruction and practice sessions ensure students are well-prepared to excel in the CELPIP exam.</p>
+          
+          <div class="downArrow">&#9660;</div>
         </div>
 
         <div className="why-choose-card">
@@ -150,13 +186,17 @@ const Home = () => {
           <p>Our physics tutors simplify intricate theories and principles, making it easier for students to understand and apply them.</p>
           <h3>Chemistry: </h3>
           <p>We break down challenging chemical concepts and reactions, ensuring students can grasp and excel in this crucial science subject.</p>
+
+          <div class="downArrow">&#9660;</div>
         </div>
 
         <div className="why-choose-card">
           <h3>Proven Success</h3>
           <p>Our students consistently achieve high academic performance and gain the confidence to pursue their educational and career goals. Join our community of successful learners and start your journey towards excellence today.</p>
+       
+          <div class="downArrow">&#9660;</div>
         </div>
-        
+
       </div>
     </div>
 

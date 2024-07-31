@@ -23,7 +23,7 @@ const Footer = () => {
                         
                             <ul class="footerMenu">
                                 <li>
-                                    <NavLink to="/" exact className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+                                    <NavLink to="/pearl_education" exact className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/about-us" className={({ isActive }) => (isActive ? 'active' : '')}>About Us</NavLink>

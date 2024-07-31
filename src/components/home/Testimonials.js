@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import person1 from "../../images/person1.jpg";
+import person1 from "../../images/defaultProfilePicture.png";
 
 const Testimonials = () => {
   return (
@@ -17,7 +17,7 @@ const Testimonials = () => {
           showArrows={true}
           emulateTouch={true}
           centerMode={true}
-          centerSlidePercentage={60}
+          centerSlidePercentage={100}
         >
           <div className="testimonial-item">
             <div className="testimonial-image-container">

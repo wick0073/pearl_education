@@ -41,19 +41,19 @@ const Home = () => {
       function () {
         var element = $(this);
         hoverTimeout = setTimeout(function () {
-          element.stop().animate({ height: "100%" }, 400);
+          element.stop().animate({ height: "100%" }, 4000); // Animation duration is 4000 milliseconds
           element.find('p, h3').css({
             overflow: "",
             whiteSpace: "",
             textOverflow: ""
           });
           element.find('.downArrow').html('&#9650;'); // Set the up arrow
-        }, 1000); // Add a delay of 1000 milliseconds
+        }, 1000); // Add a delay of 1000 milliseconds before starting the animation
       },
       function () {
         clearTimeout(hoverTimeout);
         var element = $(this);
-        element.stop().animate({ height: "200px" }, 400);
+        element.stop().animate({ height: "200px" }, 400); // Animation duration for collapse is 400 milliseconds
         element.find('p, h3').css({
           overflow: "hidden",
           whiteSpace: "nowrap",
@@ -89,7 +89,7 @@ const Home = () => {
       <div className="hero-banner-container">
         <div className="hero-banner">
           <Carousel
-            autoPlay={true}
+            autoPlay={false}
             interval={3000}
             infiniteLoop={true}
             showThumbs={false}
@@ -97,19 +97,22 @@ const Home = () => {
             showArrows={true}
           >
             <div className="slide">
-              <img src={heroBanner1} alt="Special Offer 1" style={{ width: '100%', height: 'auto' }} />
+              
               <h2>Get Started With Pearl Education</h2>
               <p>Ready to take the next step in your academic journey? Contact us today to learn more about our services and how we can help you achieve your goals. At Pearl Education, your success is our mission.</p>
+              <img src={heroBanner1} alt="Special Offer 1" style={{ width: '100%', height: 'auto' }} />
             </div>
+
             <div className="slide">
-              <h2>Special Offer 2</h2>
-              <img src={heroBanner2} alt="Special Offer 2" style={{ width: '100%', height: 'auto' }} />
-              <p>Details about the offer.</p>
+              <h2>Hear from Our Satisfied Clients</h2>
+              <p> Discover the success stories and testimonials from parents and students who have benefited from our dedicated tuition services.</p>
+              <img src={heroBanner2} alt="Hear from Our Satisfied Clients" style={{ width: '100%', height: 'auto' }} />
             </div>
+
             <div className="slide">
-              <h2>Special Offer 3</h2>
-              <img src={heroBanner3} alt="Special Offer 3" style={{ width: '100%', height: 'auto' }} />
-              <p>Details about the offer.</p>
+              <h2>Seamless Communication</h2>
+              <p>Stay connected with our dedicated team through efficient email communication, ensuring all your queries and concerns are addressed promptly.</p>
+              <img src={heroBanner3} alt="Seamless Communication" style={{ width: '100%', height: 'auto' }} />
             </div>
           </Carousel>
         </div>

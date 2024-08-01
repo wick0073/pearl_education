@@ -1,7 +1,6 @@
-
+/* Base styles */
 .our-approach-section {
   text-align: center;
-  padding: 20px;
   padding-top: 30px;
 }
 
@@ -9,7 +8,7 @@
   background-image: url('../../images/about-us-our-approach.jpg');
   background-size: cover;
   background-position: center;
-  padding: 60px;
+  padding:60px 15px 60px 15px;
   position: relative;
   margin: 20px;
   border-radius: 10px;
@@ -19,28 +18,32 @@
 
 .circle-row {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .circle {
-  background-color: rgba(20, 172, 160, 0.4);
-  color: #F4EEE1;
-  border-radius: 50%;
-  width: 30%;
-  padding-top: 30%;
-  margin: 15px;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: visible;
+  background-color: rgba(20, 172, 160, 0.7);
+    color: #F4EEE1;
+    width: 100%;
+    height: 250px;
+    margin: 15px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .circle-heading {
-  font-size: 35px;
+  font-size: 24px;
   color: #F4EEE1;
   text-shadow: black 2px 2px 2px;
   font-weight: bold;
@@ -50,29 +53,28 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
+  text-align: center;
 }
 
 .circle-description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #F4EEE1;
+  z-index: 1;
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(20, 172, 160, 0.9);
-  font-weight: bold;
-  font-size: 22px;
-  color: #F4EEE1;
-  padding: 20px;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  z-index: 3;
-  opacity: 0;
   transition: opacity 0.3s ease;
-  overflow: hidden;
+  text-align: center;
+  white-space: normal; /* Allow text to wrap */
+  padding: 5px; /* Reduce padding for mobile */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  max-height: 80%; /* Adjust max-height to fit text better */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .circle:hover .circle-heading {
@@ -81,110 +83,38 @@
 
 .circle:hover .circle-description {
   opacity: 1;
+  z-index: 2;
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
-  .circle-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .circle-row .circle:nth-child(5) {
-    grid-column: span 2;
-    justify-self: center;
-    width: 50%;
-    padding-top: 50%;
-    
-  }
-
-  .circle {
-    width: 100%;
-    padding-top: 100%;
-    position: relative;
-  }
-
-  .circle-heading {
-    font-size: 24px;
-  }
-
-  .circle-description {
-    font-size: 16px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, pointer-events 0s linear 0.3s;
-    white-space: normal;
-    padding: 10px;
-    background-color: rgba(20, 172, 160, 0.9);
-    border-radius: 10px;
-    width: 90%;
-    height: 90%; 
-    text-align: center;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-  }
-
-  .circle:active .circle-description,
-  .circle:focus .circle-description {
-    opacity: 1;
-    pointer-events: auto;
-    transition-delay: 0s;
-    width: 90%; 
-    height: 90%; 
-    transform: translate(-50%, -50%) translateY(50%);
-    overflow: auto;
-  }
-
-
-
-  .circle:active .circle-heading,
-  .circle:focus .circle-heading {
-    opacity: 0;
-  }
-
-  .circle:focus {
-    outline: none;
+@media (min-width: 768px) 
+{
+  .circle 
+  {
+    width: 60%;
   }
 }
 
-/* Responsive fonts */
-@media (max-width: 1200px) {
-  .circle-heading {
-    font-size: 36px;
+@media (min-width: 1000px) 
+{
+  .circle, .circle-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
-
-  .circle-description {
-    font-size: 18px;
+  .circle 
+  {
+    border-radius: 64px;
+    margin: 5px;
   }
-}
-
-@media (max-width: 992px) {
-  .circle-heading {
-    font-size: 32px;
+  .circle-row 
+  {
+    gap: 0px;
   }
-
-  .circle-description {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .circle-heading {
-    font-size: 24px;
-  }
-
-  .circle-description {
-    font-size: 12px;
+  .circle-description 
+  {
+    font-size: 80%;
   }
 }
 
-@media (max-width: 576px) {
-  .circle-heading {
-    font-size: 20px;
-  }
-
-  .circle-description {
-    font-size: 12px;
-  }
-}

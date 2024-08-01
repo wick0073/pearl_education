@@ -1,43 +1,29 @@
 import React, { useState } from 'react';
-import '../../css/Testimonials/Testimonials.css';
-import Button from '../../components/Button';
-import placeholder from '../../images/placeholder.jpg';  // Import the placeholder image
-import pearl from '../../images/pearl.png';  // Import the pearl image
+import '../../css/Testimonials/TestimonialsCarousel.css';
+import Button from '../Button';
+import placeholder from '../../images/defaultProfilePicture.png';  
+import pearl from '../../images/Logo.png';  
 
 const testimonialsData = [
   {
     photo: placeholder,
     text: '“Great teaching service! The lessons are engaging, and have really helped me understand the material better.”',
-    name: 'Justin Wilde, Parent',
+    name: '- Justin Wilde, Parent',
     date: 'June 2024',
-    rating: 5  // Add rating for each testimonial
-  },
-  {
-    photo: placeholder,
-    text: '“Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly. Excellent support and teaching methods. My child has improved significantly.”',
-    name: 'Sarah Johnson, Parent',
-    date: 'July 2024',
-    rating: 4
+    rating: 5  
   },
   {
     photo: placeholder,
     text: '“Excellent support and teaching methods. My child has improved significantly.”',
-    name: 'Sarah Johnson, Parent',
+    name: '- Sarah Johnson, Parent',
     date: 'July 2024',
     rating: 4
   },
   {
     photo: placeholder,
-    text: '“Excellent support and teaching methods. My child has improved significantly.”',
-    name: 'Sarah Johnson, Parent',
-    date: 'July 2024',
-    rating: 4
-  },
-  {
-    photo: placeholder,
-    text: '“Excellent support and txcellent support and teaching methods. Mxcellent support and teaching methods. Mxcellent support and teaching methods. Mxcellent support and teaching methods. Meaching methods. My child has improved significantly.”',
-    name: 'Sarah Johnson, Parent',
-    date: 'July 2024',
+    text: '“My understanding of math has improved significantly. Thank you, Pearl Education!”',
+    name: '- Alex Doe, Student',
+    date: 'August 2024',
     rating: 4
   }
 ];
@@ -58,16 +44,17 @@ const TestimonialsCarousel = () => {
       <h2 className="testimonials-heading">Take a look at what our clients say about us!</h2>
       <div className="carousel-wrapper">
 
-        <button className="carousalControl carousel-button prev" onClick={prevSlide}>
-          &#10094;
-        </button>
+        
+
         <div className="carousel-slide" style={{ transform: `translateX(-${current * 100}%)` }}>
+        
           {testimonialsData.map((testimonial, index) => (
             <div
               key={index}
               className={`slide ${index === current ? 'active' : ''}`}
             >
-              <div className="testimonial-card">
+              <button className="carousel-button prev" onClick={prevSlide}>&#10094;</button>
+              <div className="testimonial-card glass-effect">
                 <img
                   src={testimonial.photo}
                   alt="Profile"
@@ -76,49 +63,25 @@ const TestimonialsCarousel = () => {
                 <p className="testimonial-text">{testimonial.text}</p>
                 <p className="testimonial-name">{testimonial.name}</p>
                 <p className="testimonial-date">{testimonial.date}</p>
-                <div className="rating">
-                  {[...Array(5)].map((_, i) => (
-                    <img
-                      key={i}
-                      src={pearl}
-                      alt="Pearl"
-                      className={`pearl ${i < testimonial.rating ? 'filled' : ''}`}
-                    />
-                  ))}
-                </div>
               </div>
+              <button className="carousel-button next" onClick={nextSlide}>&#10095;</button>
             </div>
           ))}
+          
         </div>
+
         
-        <button className="carousalControl carousel-button next" onClick={nextSlide}>
-          &#10095;
-        </button>
-        
-        
-        
+
       </div>
-
-      {/* <div class="responsiveControls">
-          <button className="responsiveControl carousel-button prev" onClick={prevSlide}>
-            &#10094;
-          </button>
-
-          <button className="responsiveControl carousel-button next" onClick={nextSlide}>
-          &#10095;
-          </button>
-       </div> */}
-
-      
       <div className="navigation-dots">
-          {testimonialsData.map((_, dotIndex) => (
-            <span
-              key={dotIndex}
-              className={`dot ${dotIndex === current ? 'active' : ''}`}
-              onClick={() => setCurrent(dotIndex)}
-            ></span>
-          ))}
-        </div>
+        {testimonialsData.map((_, dotIndex) => (
+          <span
+            key={dotIndex}
+            className={`dot ${dotIndex === current ? 'active' : ''}`}
+            onClick={() => setCurrent(dotIndex)}
+          ></span>
+        ))}
+      </div>
       <Button className="contact-us-button" redirectTo="/contact-us">Contact Us</Button>
     </div>
   );

@@ -44,9 +44,15 @@ const Footer = () => {
                         <h3>Social Media</h3>
 
                         <div>
+                        <a href='https://www.facebook.com/'  target="_blank">
                             <div class="socialMediaIcons fb"></div>
+                            </a>
+                            <a href='https://www.instagram.com/'  target="_blank">
                             <div class="socialMediaIcons insta"></div>
-                            <div class="socialMediaIcons linkedIn"></div>
+                            </a>
+                            <a href='https://www.linkedin.com/in/pankaj-kumar-rathi-626302169/'  target="_blank">
+                            <div  class="socialMediaIcons linkedIn"></div>
+                            </a> 
                         </div>
 
                     </div>

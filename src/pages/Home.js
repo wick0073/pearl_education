@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import $ from 'jquery';
 import TitleBar from '../components/TitleBar';
 import Footer from '../components/footer';
 import Button from '../components/Button';
@@ -7,10 +8,10 @@ import '../css/Home/home.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Testimonials from '../components/Home/Testimonials.js';
-import embarkBanner from "../images/embark_banner.png";
-import $ from 'jquery';
-
-
+import embarkBanner from '../images/embark_banner.png';
+import heroBanner1 from "../images/hero-banner-1.jpg";
+import heroBanner2 from "../images/hero-banner-2.jpg";
+import heroBanner3 from "../images/hero-banner-3.jpg";
 
 const responsive = {
   superLargeDesktop: {
@@ -33,38 +34,36 @@ const responsive = {
 
 const Home = () => {
 
-  //===================================================================
-  $(document).ready(function() {
+  useEffect(() => {
     var hoverTimeout;
-    
+
     $('.why-choose-card').hover(
-        function() {
-            var element = $(this);
-            hoverTimeout = setTimeout(function() {
-                element.stop().animate({ height: "100%" }, 400);
-                element.find('p, h3').css({
-                    overflow: "",
-                    whiteSpace: "",
-                    textOverflow: ""
-                });
-                element.find('.downArrow').html('&#9650;'); // Set the up arrow
-            }, 1000); // Add a delay of 1000 milliseconds
-        },
-        function() {
-            clearTimeout(hoverTimeout);
-            var element = $(this);
-            element.stop().animate({ height: "200px" }, 400);
-            element.find('p, h3').css({
-                overflow: "hidden",
-                whiteSpace: "nowrap",
-                textOverflow: "ellipsis"
-            });
-            element.find('.downArrow').html('&#9660;'); // Set the down arrow
-        }
+      function () {
+        var element = $(this);
+        hoverTimeout = setTimeout(function () {
+          element.stop().animate({ height: "100%" }, 400);
+          element.find('p, h3').css({
+            overflow: "",
+            whiteSpace: "",
+            textOverflow: ""
+          });
+          element.find('.downArrow').html('&#9650;'); // Set the up arrow
+        }, 1000); // Add a delay of 1000 milliseconds
+      },
+      function () {
+        clearTimeout(hoverTimeout);
+        var element = $(this);
+        element.stop().animate({ height: "200px" }, 400);
+        element.find('p, h3').css({
+          overflow: "hidden",
+          whiteSpace: "nowrap",
+          textOverflow: "ellipsis"
+        });
+        element.find('.downArrow').html('&#9660;'); // Set the down arrow
+      }
     );
-})
-  //===================================================================
-  
+  }, []);
+
   const [activeCard, setActiveCard] = useState(null);
   const cardRefs = useRef([]);
 
@@ -87,35 +86,36 @@ const Home = () => {
 
   return (
     <>
-          <div className="hero-banner-container">
-      <div className="hero-banner">
-        <Carousel
-          autoPlay={true}
-          interval={3000}
-          infiniteLoop={true}
-          showThumbs={false}
-          showStatus={false}
-          showArrows={true}
-        >
-          <div className="slide">
-            <h2>Get Started With Pearl Education</h2>
-            <p>Ready to take the next step in your academic journey? Contact us today to learn more about our services and how we can help you achieve your goals. At Pearl Education, your success is our mission.</p>
-          </div>
-          <div className="slide">
-            <h2>Special Offer 2</h2>
-         
-            <p>Details about the offer.</p>
-          </div>
-          <div className="slide">
-            <h2>Special Offer 3</h2>
-            
-            <p> Details about the offer.</p>
-          </div>
-        </Carousel>
+      <div className="hero-banner-container">
+        <div className="hero-banner">
+          <Carousel
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            showStatus={false}
+            showArrows={true}
+          >
+            <div className="slide">
+              <img src={heroBanner1} alt="Special Offer 1" style={{ width: '100%', height: 'auto' }} />
+              <h2>Get Started With Pearl Education</h2>
+              <p>Ready to take the next step in your academic journey? Contact us today to learn more about our services and how we can help you achieve your goals. At Pearl Education, your success is our mission.</p>
+            </div>
+            <div className="slide">
+              <h2>Special Offer 2</h2>
+              <img src={heroBanner2} alt="Special Offer 2" style={{ width: '100%', height: 'auto' }} />
+              <p>Details about the offer.</p>
+            </div>
+            <div className="slide">
+              <h2>Special Offer 3</h2>
+              <img src={heroBanner3} alt="Special Offer 3" style={{ width: '100%', height: 'auto' }} />
+              <p>Details about the offer.</p>
+            </div>
+          </Carousel>
+        </div>
       </div>
-    </div>
 
-    <div className="services">
+      <div className="services">
         <h2>Services</h2>
         <div className="service-cards">
           <div
@@ -157,71 +157,58 @@ const Home = () => {
         </div>
       </div>
 
-
       <div className="why-choose">
-      <h2>Why Choose Pearl Education</h2>
-      <div className="why-choose-cards">
-        
-        <div className="why-choose-card">
-          <h3>Success in standardized tests is vital for academic and professional progress. We offer specialized preparation for:</h3>
-          <h3>IELTS</h3>
-          <p>Our IELTS courses focus on enhancing language proficiency and test-taking strategies to help students achieve their desired scores.</p>
-          <h3>CELPIP</h3>
-          <p>Our targeted instruction and practice sessions ensure students are well-prepared to excel in the CELPIP exam.</p>
-          
-          <div class="downArrow">&#9660;</div>
+        <h2>Why Choose Pearl Education</h2>
+        <div className="why-choose-cards">
+          <div className="why-choose-card">
+            <h3>Success in standardized tests is vital for academic and professional progress. We offer specialized preparation for:</h3>
+            <h3>IELTS</h3>
+            <p>Our IELTS courses focus on enhancing language proficiency and test-taking strategies to help students achieve their desired scores.</p>
+            <h3>CELPIP</h3>
+            <p>Our targeted instruction and practice sessions ensure students are well-prepared to excel in the CELPIP exam.</p>
+            <div className="downArrow">&#9660;</div>
+          </div>
+          <div className="why-choose-card">
+            <h3>Comprehensive Subject Coverage</h3>
+            <h3>Test Preparation</h3>
+            <p>From foundational subjects to advanced topics, we’ve got you covered:</p>
+            <h3>English</h3>
+            <p>Improve your language skills with our expert guidance in grammar, writing, and literature analysis.</p>
+            <h3>Mathematics</h3>
+            <p>Master math concepts from basic arithmetic to advanced calculus with our simplified and engaging tutoring.</p>
+            <h3>Computer Science:</h3>
+            <p>We provide in-depth tutoring in programming, coding, and computer fundamentals, equipping students with essential skills for the digital age.</p>
+            <h3>Physics:</h3>
+            <p>Our physics tutors simplify intricate theories and principles, making it easier for students to understand and apply them.</p>
+            <h3>Chemistry: </h3>
+            <p>We break down challenging chemical concepts and reactions, ensuring students can grasp and excel in this crucial science subject.</p>
+            <div className="downArrow">&#9660;</div>
+          </div>
+          <div className="why-choose-card">
+            <h3>Proven Success</h3>
+            <p>Our students consistently achieve high academic performance and gain the confidence to pursue their educational and career goals. Join our community of successful learners and start your journey towards excellence today.</p>
+            <div className="downArrow">&#9660;</div>
+          </div>
         </div>
-
-        <div className="why-choose-card">
-          <h3>Comprehensive Subject Coverage</h3>
-          <h3>Test Preparation</h3>
-          <p>From foundational subjects to advanced topics, we’ve got you covered:</p>
-          <h3>English</h3>
-          <p>Improve your language skills with our expert guidance in grammar, writing, and literature analysis.</p>
-          <h3>Mathematics</h3>
-          <p>Master math concepts from basic arithmetic to advanced calculus with our simplified and engaging tutoring.</p>
-          <h3>Computer Science:</h3>
-          <p>We provide in-depth tutoring in programming, coding, and computer fundamentals, equipping students with essential skills for the digital age.</p>
-          <h3>Physics:</h3>
-          <p>Our physics tutors simplify intricate theories and principles, making it easier for students to understand and apply them.</p>
-          <h3>Chemistry: </h3>
-          <p>We break down challenging chemical concepts and reactions, ensuring students can grasp and excel in this crucial science subject.</p>
-
-          <div class="downArrow">&#9660;</div>
-        </div>
-
-        <div className="why-choose-card">
-          <h3>Proven Success</h3>
-          <p>Our students consistently achieve high academic performance and gain the confidence to pursue their educational and career goals. Join our community of successful learners and start your journey towards excellence today.</p>
-       
-          <div class="downArrow">&#9660;</div>
-        </div>
-
       </div>
-    </div>
 
       <div className="embark-journey">
         <h2>Embark Your Journey</h2>
         <div className="embark-journey-card">
-        <img class="embark_banner" src={embarkBanner} alt="Descriptive text here"/>
-
+          <img className="embark_banner" src={embarkBanner} alt="Descriptive text here" />
           <p>Unlock your full potential with Pearl Education, your trusted partner in academic excellence. We provide personalized, high-quality tutoring for students from Lower Kindergarten (LKG) to undergraduate levels. Whether you need help with core subjects or are preparing for important language proficiency exams, Pearl Education is here to guide you every step of the way.</p>
-          <Button className="contact-btn" >Get in Touch</Button>
+          
+          <Button className="contact-btn" redirectTo="/contact-us">Contact Us</Button>
         </div>
       </div>
 
-
-    <div>
-  
-      <Testimonials />
-   
-    </div>
+      <div>
+        <Testimonials />
+      </div>
 
       <Footer />
     </>
   );
 };
-
-
 
 export default Home;

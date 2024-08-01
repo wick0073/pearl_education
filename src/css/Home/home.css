@@ -1,56 +1,92 @@
 body{
   background-color: #F4EEE1;
-  
 }
 
+
 .hero-banner-container {
-  background: rgb(247,150,45);
   background: linear-gradient(90deg, rgba(247,150,45,1) 0%, rgba(20,172,160,1) 50%, rgba(244,171,192,1) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  height: 70vh; /* Adjust height as needed */
+  height: 70vh;
   width: 100%;
   position: relative;
+  overflow: hidden; /* Apply overflow hidden to the container */
 }
 
 .hero-banner {
-  background: rgba(255, 255, 255, 0.1); /* Slight transparency to differentiate */
-  height: 300px; /* Adjusted height */
+  background: rgba(255, 255, 255, 0.1);
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 70%; /* Adjusted width */
+  width: 70%;
   margin: 0 auto;
-  border-radius: 10px; /* Add some rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Apply overflow hidden to the banner */
 }
 
 .slide {
-  height: 100%;
+ height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding does not cause overflow */
 }
+
+.img-overlay{
+  color: black;
+  opacity: 0.55;
+}
+.carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0, 0, 0, 0) !important; 
+}
+
+.hero-banner-container div.slide
+{
+  flex-flow: row !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.hero-banner-container div.slide h2
+{
+    z-index: 10;
+    position: absolute;
+}
+.hero-banner-container div.slide img
+{
+  z-index: 1;
+  opacity: 0.3;
+}
+.hero-banner-container div.slide p
+{
+  position: absolute;
+  z-index: 10;
+  margin: 100px 20px 0px 20px;
+}
+
+
+/* Ensure text is visible in the first slide */
+.carousel .slide:first-child .text-overlay {
+  overflow: visible; /* Allow text to be visible */
+  position: relative;
+}
+
+/* Hide overflow for the remaining slides if needed */
+.carousel .slide:not(:first-child) {
+  overflow: hidden;
+}
+
 
 .carousel .slide {
   background: none;
-}
-
-
-.carousel .control-arrow,
-.carousel.carousel-slider .control-arrow {
-  -webkit-transition: all 0.25s ease-in;
-  -moz-transition: all 0.25s ease-in;
-  -ms-transition: all 0.25s ease-in;
-  -o-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
 }
 
 .carousel .control-arrow,
@@ -115,32 +151,34 @@ body{
 
 .service-cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
 .service-card {
-  /* width: 400px; Increased width for better visibility
-  height: 300px; Increased height for more content space */
+  /* width: 100%; */
+  /* max-width: 400px; */
+  height: 300px;
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* More pronounced shadow */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   position: relative;
   overflow: hidden;
   background-color: #F7962D;
   color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transform transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: scale(1.05); /* Slightly enlarge the card on hover */
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Enhance shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 .service-card p {
-  white-space: normal; /* Allow text to wrap normally */
-  margin: 0; /* Remove default margins to avoid spacing issues */
+  white-space: normal;
+  margin: 0;
 }
 
 .service-btn {
@@ -174,10 +212,10 @@ body{
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
   transition: opacity 0.3s ease;
   opacity: 0;
-  z-index: 1; /* Ensure overlay is on top of other content */
+  z-index: 1;
 }
 
 .service-card.show-more .more-info {
@@ -186,10 +224,9 @@ body{
 }
 
 .more-info p {
-  white-space: normal; /* Allow text to wrap normally */
-  margin: 0; /* Remove default margins to avoid spacing issues */
+  white-space: normal;
+  margin: 0;
 }
-
 
 .why-choose {
   background: rgb(247,150,45);
@@ -283,7 +320,6 @@ body{
   object-fit: cover; /* Ensure the image covers its container */
 }
 
-
 .contact-btn {
   width: 150px;
   background-color: #14ACA0;
@@ -298,7 +334,6 @@ body{
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
- 
 }
 
 .contact-btn:hover {
@@ -379,7 +414,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
   }
-
   .service-card
   {
     width: 70%;

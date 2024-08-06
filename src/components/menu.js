@@ -5,18 +5,63 @@ import AboutUs from '../pages/AboutUs';
 import Testimonials from '../pages/Testimonials';
 import ContactUs from '../pages/ContactUs';
 import $ from 'jquery';
+import { useEffect } from 'react';
 
 function Menu() {
 
+
+    const scrollToTop = () => 
+    {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });
+    };
+
+  
+
     const toggleMenu = () => {
-       
-
-       
         $('nav').slideToggle();
-
       };
 
+
+      
+
+
+      useEffect(() => {
+
         
+
+        const handleScroll = () => 
+        {
+            if (window.scrollY > 20) 
+            {
+                document.querySelector('.mainMenu').classList.add('mainMenuSticky');
+           
+            } else {
+                document.querySelector('.mainMenu').classList.remove('mainMenuSticky');
+            }
+
+             if (window.scrollY > 500) 
+            {
+                document.querySelector('.goUpButton').classList.add('goUpButtonShow');
+            }
+            else 
+            {
+                document.querySelector('.goUpButton').classList.remove('goUpButtonShow');
+            }
+
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+
+
+
+    }, []);
       
 
     return (
@@ -24,7 +69,12 @@ function Menu() {
             <div className="mainMenu">
 
                 <div class="menu-icon" id="menu-icon" onClick={toggleMenu}> &#9776; </div>
-                <div className="logo"></div>
+
+                
+                    <div className="logo" >
+                        <NavLink to="/pearl_education" exact className={ ({ isActive }) => (isActive ? 'active logoNav' : 'logoNav')}></NavLink>
+                    </div>
+                
 
                 <div class="menuBorder"></div>
                 <nav>
@@ -46,13 +96,19 @@ function Menu() {
                 </nav>
                 
 
+                
+            </div>
+            
+            <div className='goUpButton' onClick={scrollToTop}>
+            &#11014;
+            </div>
+
                 <Routes>
                     <Route path="/pearl_education" element={<Home />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/testimonials" element={<Testimonials />} />
                     <Route path="/contact-us" element={<ContactUs />} />
                 </Routes>
-            </div>
         </Router>
     );
 }

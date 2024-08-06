@@ -11,7 +11,9 @@ const Footer = () => {
             <div class="footerColumnContainer">
 
                     <div class="col1">
-                        <div class="footer-logo"></div>
+                        <div class="footer-logo">
+                            <NavLink to="/pearl_education" exact className={ ({ isActive }) => (isActive ? 'active logoNav' : 'logoNav')}></NavLink>
+                        </div>
                         <h4>Pearl Education</h4>
                         <p>Embark on a path to academic success with Pearl Education, where personalized learning meets excellence.</p>
                     </div>

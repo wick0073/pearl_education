@@ -33,16 +33,64 @@ body
   color: #61dafb;
 }
 /*========================================================================= Main Menu */
+.mainMenu
+{
+  width: 100%;
+    height: 75px;
+    padding: 5px 0 5px 0;
+    position: sticky;
+    transition: all 0.3s ease;
+    z-index: 999;
+    background: #F4EEE1;
+}
+.mainMenuSticky
+{
+  position: fixed;
+  background: #F4EEE1;
+  top: 0px;
+  height: 85px;
+  border-bottom: 3px solid #2D2D2D;
+}
+.goUpButton
+{
+
+  display: none;
+}
+.goUpButton:hover
+{
+  background: #F4ABC0;
+  transition: all 0.3s ease;
+}
+.goUpButtonShow
+{
+  background: #F7962D;
+  height: 40px;
+  position: fixed;
+  z-index: 999;
+  right: 19px;
+  bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #6a6565;
+  font-size: 35px;
+  padding: 0px 10px 5px 10px;
+  cursor: pointer;
+  display: block;
+}
 nav 
 {
     display: block;
     background: #F4EEE1;
-    margin: 20px 0 0px 0px;
+    margin: 10px 0 0px 0px;
     position: absolute;
     right: 0px;
     top: 0px;
 }
-
+.logoNav
+{
+  width: 65px;
+  height: 65px;
+  display: block;
+}
 .menu {
   display: flex;
   list-style-type: none;

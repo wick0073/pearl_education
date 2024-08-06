@@ -43,7 +43,8 @@ const ContactUsForm = () => {
           <form onSubmit={handleSubmit} className="contact-form">
 
           <Tooltip text="Enter Your Full Name">
-            <label>
+          
+            <label htmlFor="name">
               <span className="requiredIcon">*</span>
               <input
                 type="text"
@@ -57,7 +58,7 @@ const ContactUsForm = () => {
             </Tooltip>
 
             <Tooltip text="Enter Your Email Address">
-              <label>
+              <label htmlFor="email">
                 <span className="requiredIcon">*</span>
                 <input
                   type="email"
@@ -71,7 +72,7 @@ const ContactUsForm = () => {
             </Tooltip>
 
             <Tooltip text="Enter Your Contact Number">
-              <label>
+              <label htmlFor="contactNumber">
                 <span className="requiredIcon">&nbsp;&nbsp;</span>
                 <input
                   type="text"
@@ -84,7 +85,7 @@ const ContactUsForm = () => {
             </Tooltip>
 
             <Tooltip text="Enter Subject">
-              <label>
+              <label htmlFor="subject">
                 <span className="requiredIcon">*</span>
                 <input
                   type="text"
@@ -98,7 +99,7 @@ const ContactUsForm = () => {
             </Tooltip>
 
             <Tooltip text="Enter Message">
-              <label>
+              <label htmlFor="message">
                 <span className="requiredIcon">*</span>
                 <textarea
                   name="message"

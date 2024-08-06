@@ -30,10 +30,12 @@ const ContactUsForm = () => {
         emailjs.send('service_pfllvgy', 'template_qhlwk0l', formData, 'J-w-M_av2o0C9GXEI')
           .then((response) => {
             setResponseMessage('Message sent successfully!');
+            alert('Message sent successfully!');
           })
           .catch((error) => {
             setResponseMessage('Failed to send the message. Please try again later.');
             console.error('Error:', error);
+            alert('Failed to send the message. Please try again later.');
           });
       };
 

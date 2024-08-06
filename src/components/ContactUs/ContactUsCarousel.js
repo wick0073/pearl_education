@@ -70,7 +70,7 @@ const ContactUsCarousel = () => {
                   <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
-                      4.6<div className="stars"> ★</div>
+                      4.0<div className="stars"> ★</div>
                     </div>
                     <h3>Ravi G</h3>
                     <div className="service"> Parent of Grade 12 Student</div>
@@ -101,7 +101,7 @@ const ContactUsCarousel = () => {
                   <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
-                      4.6<div className="stars"> ★</div>
+                      5.0<div className="stars"> ★</div>
                     </div>
                     <h3>Rahil</h3>
                     <div className="service">Grade 11 Student</div>
@@ -132,7 +132,7 @@ const ContactUsCarousel = () => {
                   <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
-                      4.6<div className="stars"> ★</div>
+                      4.8<div className="stars"> ★</div>
                     </div>
                     <h3>Ephraim</h3>
                     <div className="service">Parent of Grade 12 Student</div>
@@ -193,7 +193,7 @@ const ContactUsCarousel = () => {
                   <img src={person1} alt="Person 1" className="person" />
                   <div className="reviewTopSectionLeftCol">
                     <div className="starsText">
-                      4.6<div className="stars"> ★</div>
+                      4.5<div className="stars"> ★</div>
                     </div>
                     <h3>Rayyan</h3>
                     <div className="service">Undergraduate Studen</div>
